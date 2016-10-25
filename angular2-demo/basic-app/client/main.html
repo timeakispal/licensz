@@ -1,0 +1,64 @@
+<head>
+  <title>basic-app</title>
+</head>
+
+<body>
+  <!-- <h1>Welcome to Meteor!</h1> -->
+
+
+</body>
+
+<template name="main">
+    <!-- <h1>Todos</h1> -->
+    <!-- {{> navigation}} -->
+    {{> yield}}
+    <div class="footer">Copyright &copy; Todos, 2014-2015.</div>
+</template>
+
+<template name="home">
+    <p>Welcome to the Todos application.</p>
+</template>
+
+<template name="navigation">
+    <ul>
+      <li><a href="{{pathFor route='home'}}">Home</a></li>
+    {{#if currentUser}}
+      <li><a href="#" class="logout">Logout</a></li>
+    {{else}}
+      <li><a href="{{pathFor route='register'}}">Register</a></li>
+      <li><a href="{{pathFor route='login'}}">Login</a></li>
+    {{/if}}
+    </ul>
+</template>
+
+<template name="register">
+<div class="register-login">
+  <div class="container">
+    <a href="{{pathFor route='home'}}">Home</a>
+    <h1>Create new account</h1>
+    <h4>Already register? <a href="{{pathFor route='login'}}">Login!</a></h4>
+    
+    <form>
+        <div class="row-1"><input type="email" name="email" placeholder="E-mail *"></div>
+        <div class="row-2"><input type="text" name="firstname" placeholder="First Name"></div>
+        <div class="row-3"><input type="text" name="lastname" placeholder="Last Name"></div>
+        <div class="row-4"><input type="password" name="password" placeholder="Password *"></div>
+        <input type="submit" value="Register">
+    </form>
+  </div>
+</div>
+</template>
+
+<template name="login">
+<div class="register-login">
+  <div class="container2">
+    <h1>Login</h1>
+    <form>
+        <div class="row-1"><input type="email" name="email" placeholder="E-mail *"></div>
+        <div class="row-4"><input type="password" name="password" placeholder="Password *"></div>
+        <p><input type="submit" value="Login"></p>
+    </form>
+  </div>
+</div>
+</template>
+
