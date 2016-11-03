@@ -1,4 +1,8 @@
 import '/imports/ui/templates/base.html';
+import '/imports/ui/templates/navigation.html';
+import '/imports/ui/templates/footer.html';
+import '/imports/ui/templates/home.html';
+import '/imports/ui/templates/user.html';
 
 Router.configure({
     layoutTemplate: 'myLayout',
@@ -10,7 +14,7 @@ Router.configure({
 
 Router.route('/', {
 	name: 'home',
-    template: 'home'
+    template: 'home',
 });
 
 Router.route('/user', {

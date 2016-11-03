@@ -1,0 +1,11 @@
+<template name="user">
+  {{#if currentUser}}
+  	{{> home}}
+  {{else}}
+  <div class="register-login">
+    <div class="container">
+      {{> atForm}}
+    </div>
+  </div>
+  {{/if}}
+</template>

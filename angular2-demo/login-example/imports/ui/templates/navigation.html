@@ -1,0 +1,50 @@
+<template name="myNav">
+<div class="w3-top">
+  <ul class="w3-navbar w3-red w3-card-2 w3-left-align w3-medium">
+    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+      <a class="w3-padding-large w3-hover-white w3-medium w3-red hide-elements" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    </li>
+    <li><a href="{{pathFor route='home'}}" class="w3-padding-large w3-white hide-home">Logo</a></li>
+    <li class="w3-hide-small"><a href="{{pathFor route='home'}}" class="w3-padding-large w3-hover-white"><i class="fa fa-home"></i> Home</a></li>
+    <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-white"><i class="fa fa-th"></i> Categories</a></li>
+    <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-white"><i class="fa fa-file-text-o"></i> Listings</a></li>
+
+    {{#if currentUser}}
+      <li class="w3-hide-small"></li>
+      
+        <li class="w3-hide-small w3-right">
+        <div class="w3-dropdown-hover w3-red">
+          <a class="w3-padding-large w3-hover-white">{{firstName}} <i class="fa fa-user-circle w3-padding-right"></i></a>
+          <div class="w3-dropdown-content w3-border">
+            <a class="w3-medium" href="#"> My account</a>
+            <a class="w3-medium" href="#"><i class="fa fa-heart-o"></i> Favorites</a>
+            <a class="w3-medium logout" href="#"><i class="fa fa-sign-out"></i> Log out</a>
+          </div>
+        </div>
+        </li>
+      <li class="w3-hide-small w3-right"><a href="#" class="w3-padding-large w3-hover-white"><i class="fa fa-map-marker"></i> Add new</a></li>
+    {{else}}
+      <li class="w3-hide-small w3-right"><a href="{{pathFor route='user'}}" class="w3-padding-large w3-hover-white"><i class="fa fa-sign-in"></i> Log in</a></li>
+    {{/if}}
+  </ul>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+    <ul class="w3-navbar w3-left-align w3-medium w3-black">
+      <li><a class="w3-padding-large hide-elements" href="{{pathFor route='home'}}"><i class="fa fa-home"></i> Home</a></li>
+      <li><a class="w3-padding-large hide-elements" href="#" ><i class="fa fa-th"></i> Categories</a></li>
+      <li><a class="w3-padding-large hide-elements" href="#" ><i class="fa fa-file-text-o"></i> Listings</a></li>
+      
+      {{#if currentUser}}
+        <li><a class="w3-padding-large hide-elements" href="#"><i class="fa fa-map-marker"></i> Add new</a></li>
+        <li><a class="w3-padding-large hide-elements" href="#"><i class="fa fa-user"></i> My account</a></li>
+        <li><a class="w3-padding-large hide-elements" href="#"><i class="fa fa-heart"></i> Favorites</a></li>
+        <li><a class="w3-padding-large logout hide-elements" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+
+      {{else}}
+        <li><a href="{{pathFor route='user'}}" class="w3-padding-large hide-elements"><i class="fa fa-user"></i> Log in</a></li>
+      {{/if}}
+    </ul>
+  </div>
+</div>
+</template>
