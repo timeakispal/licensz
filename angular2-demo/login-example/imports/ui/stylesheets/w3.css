@@ -36,10 +36,12 @@ h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-
 .w3-serif{font-family: "Trebuchet MS", Helvetica, sans-serif;}
 h1,h2,h3,h4,h5,h6{font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:inherit}
-hr{border:0;border-top:1px solid #eee;margin:20px 0}
+hr{border:0;border-top:1.5px solid #ccc;margin:20px 0}
 img{margin-bottom:-5px}a{color:inherit}
+.w3-bold{font-weight:bold}
 .w3-image{max-width:100%;height:auto}
 .w3-table,.w3-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}
+.w3-table-footer{border-collapse:collapse;border-spacing:0;width:70%;display:table;padding:12px 24px!important}
 .w3-table-all{border:1px solid #ccc}
 .w3-bordered tr,.w3-table-all tr{border-bottom:1px solid #ddd}
 .w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
@@ -47,8 +49,8 @@ img{margin-bottom:-5px}a{color:inherit}
 .w3-table-all tr:nth-child(even){background-color:#f1f1f1}
 .w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#ccc}
 .w3-centered tr th,.w3-centered tr td{text-align:center}
-.w3-table td,.w3-table th,.w3-table-all td,.w3-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
-.w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{padding-left:16px}
+.w3-table td,.w3-table th,.w3-table-footer td,.w3-table-footer th,.w3-table-all td,.w3-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.w3-table th:first-child,.w3-table td:first-child,.w3-table-footer th:first-child,.w3-table-footer td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{padding-left:16px}
 .w3-btn,.w3-btn-block{border:none;display:inline-block;outline:0;padding:6px 16px;vertical-align:middle;overflow:hidden;text-decoration:none!important;color:#fff;background-color:#000;text-align:center;cursor:pointer;white-space:nowrap}
 .w3-btn:hover,.w3-btn-block:hover,.w3-btn-floating:hover,.w3-btn-floating-large:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
 .w3-btn,.w3-btn-floating,.w3-btn-floating-large,.w3-closenav,.w3-opennav{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
